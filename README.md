@@ -1,2 +1,2 @@
-# BFEDA-Vanessa-Martinez
+# BFEDA-GameFinder-Vanessa-Martinez
 Code part
