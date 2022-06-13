@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+.back {
+  height: 1024px;
+  width: 1440px;
+  background-size: cover;
+  background: #141414 no-repeat fixed center;
+}
