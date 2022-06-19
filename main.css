@@ -1,10 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700;800&family=Open+Sans&display=swap");
+
 body {
   margin: 0;
 }
 
-.back {
-  height: 1024px;
-  width: 1440px;
+.backOfMain {
+  background-color: #151515;
+}
+
+.squareOfTheSearch {
+  background: linear-gradient(180deg, #5fe19b 0%, #36b972 50%, #0ea152 100%);
+  box-shadow: 1px -3px 36px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 94px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gameFinderWhiteLogo {
+  width: 267px;
+  height: 34px;
+  margin-top: 29px;
+  margin-left: 40px;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.searchBar {
+  width: 322px;
+  height: 47px;
+  border-radius: 4px;
+  background: #ffffff;
+  margin-top: 23px;
+  border: none;
+  padding-left: 40px;
+}
+
+.searchBar:focus {
+  outline: none;
+}
+
+.searchBar::placeholder {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #939393;
+}
+
+.searchingLens {
+  margin-top: 38px;
+  display: flex;
+  position: absolute;
+  margin-left: 11px;
+  cursor: pointer;
+}
+
+/* -intento de la x en el search bar-
+ .xIcon {
+  height: 0;
+}
+
+.xIcon > .searchBar:focus {
+  margin-top: 37px;
+  display: flex;
+  position: absolute;
+  margin-left: 331px;
+  cursor: pointer;
+} */
+
+.logOutText {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #ffffff;
+  margin-right: 16px;
+}
+
+.avatarImg {
+  background: url("custom-avatar.png"), #c4c4c4;
   background-size: cover;
-  background: #141414 no-repeat fixed center;
+  border: 2px solid #ffffff;
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  margin-right: 40px;
+  margin-top: 23px;
+  cursor: pointer;
+}
+
+.logOutWithAvatar {
+  display: flex;
+}
+
+.switch {
+  position: relative;
+  width: 44px;
+  height: 22px;
+  margin-right: 40px;
+  margin-top: 27px;
+  float: right;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  cursor: pointer;
+  width: 44px;
+  height: 22px;
+  background-color: #e1e1e4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #5f81fb;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.slider,
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.topTextWithSlider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topText {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 40px;
+}
+
+.natText {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 64px;
+  color: #ffffff;
+  margin-top: 19px;
+}
+
+.natSub {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.sideBarWithCards {
+  display: flex;
+}
+
+.sideBarText {
+  margin-left: 40px;
+  flex-direction: column;
+  display: flex;
+  width: 205px;
+  float: left;
+}
+
+.homeText,
+.reviewsText,
+.newReleasesText,
+.popularText {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.homeText {
+  color: #5fe19b;
+  margin-top: 31px;
+}
+
+.textWithIcon {
+  margin-top: 23px;
+}
+
+.timeTrio,
+.popularSub {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+  cursor: pointer;
+}
+
+.popularText {
+  margin-top: 55px;
+}
+
+.timeTrioText,
+.popularSubText,
+.darkModeText {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  padding-left: 11px;
+}
+
+.textWithSlider {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.darkModeText {
+  float: right;
+  margin-right: 13px;
+  position: relative;
+  margin-top: 27px;
+}
+
+.cardSpace {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 40px;
+  gap: 24px;
+  margin-top: 31px;
+  margin-bottom: 24px;
+}
+
+.card {
+  width: 363px;
+  height: 314px;
+  border-radius: 12px;
+  background-color: #303030;
+}
+
+.cardImgContainer {
+  width: 100%;
+  height: 190px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.heartIcon {
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+  position: static;
+  cursor: pointer;
+}
+
+.cardTextsContainer {
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upperText {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardName {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardNumber {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #36b972;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.releaseDateAndGenres,
+.megaAnswerText {
+  display: flex;
+  flex-direction: column;
+}
+.genresContainer {
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.releaseDateAndGenres {
+  margin-right: 20px;
+}
+
+.infoText {
+  display: flex;
+}
+
+.releaseDateText,
+.genresText {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #939393;
+}
+
+.releaseDateText,
+.answerText {
+  margin-bottom: 6px;
+}
+
+.iconsSpace {
+  display: flex;
+  align-items: flex-start;
+}
+
+.iconSvg {
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.answerText,
+.iconsText {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.genresContainer {
+  display: flex;
 }
