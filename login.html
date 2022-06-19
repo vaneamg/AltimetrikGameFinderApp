@@ -25,6 +25,7 @@
         src="gameFinderWhiteLogo.png"
         alt="gameFinderLogo"
       />
+
       <div class="cir1">
         <svg
           width="13"
@@ -76,11 +77,17 @@
         >
       </div>
       <div class="inputRectangle">
-        <input type="email" placeholder="Email" class="inputMail" />
+        <input type="email" placeholder="Email" class="inputMail" email />
         <div class="passwordContainer">
-          <input type="password" placeholder="Password" class="inputPass" />
+          <input
+            type="password"
+            placeholder="Password"
+            class="inputPass"
+            password
+          />
           <svg
             class="eyeSvg"
+            onclick="eye()"
             width="22"
             height="16"
             viewBox="0 0 22 16"
@@ -97,14 +104,18 @@
         </div>
         <div class="cbfp">
           <div class="checkboxContainer">
-            <input type="checkbox" class="check" id="c1" />
+            <input
+              type="checkbox"
+              class="check"
+              id="c1"
+              onclick="cbRemenberMe()"
+            />
             <label for="c1" class="cb">Remember me</label>
           </div>
 
           <a href="#" class="fp">Forgot password?</a>
         </div>
-
-        <button type="button" class="lgb">Log in</button>
+        <input type="button" class="lgb" value="Log In" />
         <div class="registerNow">
           <span class="nry">Not registered yet?</span>
           <a href="#" class="rn">Register now</a>
@@ -174,5 +185,6 @@
         </div>
       </div>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>

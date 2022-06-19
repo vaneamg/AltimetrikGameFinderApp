@@ -3,7 +3,7 @@ body {
 }
 
 .backImage {
-  width: 1440px;
+  width: 100%;
   height: 1024px;
   background: url("backgimg.png") #c4c4c4 no-repeat fixed center;
   background-size: cover;
@@ -101,6 +101,7 @@ body {
   position: fixed;
   margin-top: 16px;
   margin-right: 9px;
+  cursor: pointer;
 }
 
 .cbfp {
@@ -176,6 +177,10 @@ body {
   cursor: pointer;
 }
 
+.lgb:hover {
+  opacity: 40%;
+}
+
 .registerNow {
   display: flex;
   justify-content: center;
@@ -240,6 +245,10 @@ body {
   align-items: center;
   margin-bottom: 24px;
   cursor: pointer;
+}
+
+.socialMediaButtons:hover {
+  opacity: 40%;
 }
 
 .socialMediaButtons > svg {
