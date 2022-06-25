@@ -77,14 +77,9 @@
         >
       </div>
       <div class="inputRectangle">
-        <input type="email" placeholder="Email" class="inputMail" email />
+        <input type="email" placeholder="Email" class="inputMail" />
         <div class="passwordContainer">
-          <input
-            type="password"
-            placeholder="Password"
-            class="inputPass"
-            password
-          />
+          <input type="password" placeholder="Password" class="inputPass" />
           <svg
             class="eyeSvg"
             onclick="eye()"
@@ -115,7 +110,12 @@
 
           <a href="#" class="fp">Forgot password?</a>
         </div>
-        <input type="button" class="lgb" value="Log In" />
+        <input
+          type="button"
+          class="lgb"
+          value="Log In"
+          onclick="{validate()}"
+        />
         <div class="registerNow">
           <span class="nry">Not registered yet?</span>
           <a href="#" class="rn">Register now</a>

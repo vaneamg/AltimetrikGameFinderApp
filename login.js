@@ -1,20 +1,23 @@
-/* inputs  */
-function login() {
-  var email;
-  var password;
+/* validation  */
+function validate() {
+  let email = document.querySelector(".inputMail").value;
+  let emailRegex = /^[a-zA-Z0-9\.-]+@[a-zA-Z0-9]+\.[a-zA-Z]+[a-zA-Z]*$/;
+  let emailResult = emailRegex.test(email);
 
-  email = document.getElementsByClassName(inputMail).value;
-  password = document.getElementsByClassName(inputPass).value;
+  let password = document.querySelector(".inputPass").value;
+  let passRegex = /^[a-zA-Z0-9\.-]{3,16}$/;
+  let passResult = passRegex.test(password);
 
-  if (email === "vane@gmail.com" && password == "123.456$") {
-    window.location = "main.html";
+  if (emailResult && passResult) {
+    window.location.href = "localhost:5500/main.html";
+  } else {
+    alert("Incorrect credencials");
   }
 }
 
 /* checkbox */
-
-const checkboxPart = document.getElementsByName(check);
-const email = document.getElementsByName(inputMail);
+const checkboxPart = document.querySelector(".check");
+const email = document.querySelector(".inputMail");
 
 if (localStorage.checkbox && localStorage.checkbox !== "") {
   checkboxPart.setAttribute("checked", "checked");
@@ -38,10 +41,10 @@ function cbRemenberMe() {
 var state = false;
 function eye() {
   if (state) {
-    document.getElementsByName(inputPass).setAttribute("type", "password");
+    document.querySelector(".inputPass").setAttribute("type", "password");
     state = false;
   } else {
-    document.getElementsByClassName(inputPass).setAttribute("type", "text");
+    document.querySelector(i.nputPass).setAttribute("type", "text");
     state = true;
   }
 }

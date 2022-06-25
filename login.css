@@ -293,13 +293,18 @@ body {
   right: 32px;
 }
 
+.cir1,
+.cir2 {
+  position: fixed;
+}
+
 .carrousel {
   background-color: #515151;
   height: 27px;
   width: 120px;
   border-radius: 18px;
   opacity: 80%;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 32px;
   box-sizing: border-box;
