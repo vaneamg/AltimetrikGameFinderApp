@@ -97,7 +97,7 @@ body {
   justify-content: flex-end;
 }
 
-.eyeSvg {
+.eyeSvgContainer {
   position: fixed;
   margin-top: 16px;
   margin-right: 9px;
